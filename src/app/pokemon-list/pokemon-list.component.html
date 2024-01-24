@@ -1,0 +1,33 @@
+<header class="app-header">
+    <a href="https://fontmeme.com/fr/police-pokemon/">
+    <img src="https://fontmeme.com/permalink/240123/fae6e98afcede14048f2aec2206a8579.png" alt="police-pokemon" border="0"></a>
+    <p>An index of Pokémon built as a client side Angular webapp.</p>
+    
+</header>
+    <div class="Advance-filter">
+      <h2 >Filter by type</h2>
+    </div> 
+
+<div class="filters">
+ <button class="type-button" [class.active]="selectedFilter === ''" (click)="selectType('')">All</button>
+  <div *ngFor="let type of getPokemonTypes()">
+    <button class="type-button" [class.active]="selectedFilter === type" (click)="selectType(type)" [ngClass]="'type-button ' + type.toLowerCase()">
+      {{ type }}
+    </button>
+  </div>
+</div>
+
+
+<div class="pokemon-grid">
+  <a *ngFor="let poke of pokemon | paginate: {itemsPerPage: 10, currentPage: page, totalItems: totalPokemons}" [routerLink]="['/pokemon-detail', poke.name]">
+    <div class="box" (click)="showDetails(poke.name)">
+      <div class="container">
+        <img src="{{ poke.sprites.front_default }}" alt="Pokemon">
+      </div>
+      <h3>{{ poke.name }}</h3>
+    </div>
+  </a>
+</div>
+
+<pagination-controls (pageChange)="page =$event; pokemon= []; getPokemons()" ></pagination-controls>
+

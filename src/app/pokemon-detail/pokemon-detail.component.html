@@ -1,0 +1,13 @@
+<div class="container">
+<div *ngIf="poke">
+  <h2>{{ poke.name }}</h2>
+  <img [src]="poke.sprites.front_default" alt="Pokemon">
+  <p><strong>Type:</strong> {{ poke.types[0].type.name }}</p>
+  <p><strong>Height:</strong> {{ poke.height }}</p>
+  <p><strong>Health:</strong> {{ poke.stats[0].base_stat }}</p>
+  <p><strong>Attack Power:</strong> {{ poke.stats[1].base_stat }}</p>
+  <button (click)="goBack()">Back</button>
+</div>
+</div>
+
+   

@@ -1,0 +1,134 @@
+.header {
+    padding: 20px 0px;
+    text-align:center;
+    background-color: #3b4cca;
+}
+.header h2 {
+    text-transform: uppercase;
+    color:#ffcc03;
+    letter-spacing:3px ;
+     
+
+}
+.header p{
+    color: white;
+    text-align: center;
+}
+.app-header {
+    color: #fff; 
+    padding: 20px;
+    text-align: center;
+     background-color: #3b4cca;
+}
+
+.h2{
+    text-align: center;
+    margin-top: 80px;
+  margin-bottom: 5px;
+}
+/* pokemon grid */
+.pokemon-grid{
+    display: grid;
+    grid-gap:20px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(23%, 1fr));
+    color: white;
+    
+}
+.container{
+  height: 280px;
+  width: 280px;
+  margin: 10px auto;
+  margin-top:10px;
+  border-radius:15px;
+  box-shadow: 1px 2px 3px rgb(0, 0, 0.3);
+  background: black; 
+
+}
+.pokemon-grid .box{
+    width:100%;
+    height: 300px;
+    box-shadow: 1px 2px 5px rgb(0, 0, 0.3);
+    display: grid;
+    text-align: center;
+    color: black;
+    border-radius:15px;
+}
+.pokemon-grid .box img{
+    width: 100px;
+    display:block;
+    margin:0 auto ;
+}
+
+.pokemon-grid .box .container {
+  display: grid;
+  place-items: center; 
+  height: 90%; 
+  color: black;
+}
+
+pagination-controls{
+  text-align: center;
+}
+
+.filters {
+ text-align: center;
+   padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+ .Advance-filter h2{
+    text-align: center;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.type-button {
+  padding: 8px 15px;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.type-button.grass { background-color: #78C850; color: white; }
+.type-button.fire { background-color: #F08030; color: white; }
+.type-button.water { background-color: #6890F0; color: white; }
+.type-button.poison { background-color:#ffbe33 ; color: white; }
+.type-button.bug { background-color: #33ff33; color: white; }
+.type-button.flying { background-color: #3349ff; color: white; }
+.type-button.normal { background-color: #8633ff; color: white; }
+.type-button.rock { background-color: #ff33f9; color: white; }
+.type-button.electric { background-color: #ff3399; color: white; }
+.type-button.ice{ background-color: #ff3358; color: white; }
+
+@media only screen and (max-width: 600px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+  }
+}
+
+
+
+
+
+
+
