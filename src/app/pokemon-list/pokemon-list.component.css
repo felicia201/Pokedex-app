@@ -42,7 +42,7 @@
   margin-top:10px;
   border-radius:15px;
   box-shadow: 1px 2px 3px rgb(0, 0, 0.3);
-  background: black; 
+  background: #333; 
 
 }
 .pokemon-grid .box{
@@ -53,6 +53,7 @@
     text-align: center;
     color: black;
     border-radius:15px;
+    background-color: white;
 }
 .pokemon-grid .box img{
     width: 100px;
